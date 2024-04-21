@@ -13,12 +13,11 @@ class Client():
         self.client.close()
 
 if __name__ == "__main__":
-    # my_str = "{[1, 2], 0}; {[1, 3], 1}; {[2, 2], 0}; {[2, 3], 0}"
-    my_str = "this is not true"
+    sensor1 = "{[1, 2], 0}; {[1, 3], 1}; {[2, 2], 0}; {[2, 3], 0}"
     client1 = Client()
-    client1.send_data(my_str)
-    second_str="{[2, 1], 1}; {[2, 2], 1}; {[3, 1], 0}; {[3, 2], 0}"
+    client1.send_data(sensor1)
+    sensor2="{[2, 1], 1}; {[2, 2], 1}; {[3, 1], 0}; {[3, 2], 0}"
     client2 = Client()
-    client2.send_data(second_str)
+    client2.send_data(sensor2)
 
 

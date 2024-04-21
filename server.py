@@ -30,8 +30,8 @@ class Server:
             message = json.dumps(message).encode()
             client_socket.sendall(message)
             print(f"Connection from {address} closed")
-            # client_socket.close()
-            # return
+            client_socket.close()
+            return
 
         data_json = json.dumps(Server.occupancy_data).encode()
         # Echo back the received data
