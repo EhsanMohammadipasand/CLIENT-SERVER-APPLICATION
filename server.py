@@ -8,7 +8,6 @@ class Server:
     def __init__(self,ip_address=ip_address,port_number=port_number):
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server.bind((ip_address, port_number))
-        print(port_number)
         self.server.listen(concurrent_connections)
         
     def handle_client(self,client_socket, address):
@@ -48,7 +47,6 @@ class Server:
 
 if __name__ == "__main__":
     server = Server()
-    server.start_server()    
-    print()       
+    server.start_server()        
 
 

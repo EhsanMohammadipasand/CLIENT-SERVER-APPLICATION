@@ -19,5 +19,6 @@ if __name__ == "__main__":
     sensor2="{[2, 1], 1}; {[2, 2], 1}; {[3, 1], 0}; {[3, 2], 0}"
     client2 = Client()
     client2.send_data(sensor2)
+    print()
 
 
